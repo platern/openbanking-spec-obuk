@@ -15,7 +15,8 @@ paths:
     post:
       tags:
         - "Account Access"
-      summary: "Capture a customer's consent"
+      summary: "Create account information consent"
+      description: "Capture a customer's consent"
       operationId: "CreateAccountAccessConsents"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -62,7 +63,8 @@ paths:
     get:
       tags:
         - "Account Access"
-      summary: "Fetch a customer's consent (including status)"
+      summary: "Get account information consent"
+      description: "Fetch a customer's consent (including status)"
       operationId: "GetAccountAccessConsentsConsentId"
       parameters:
         - $ref: "#/components/parameters/ConsentId"
@@ -94,7 +96,8 @@ paths:
     delete:
       tags:
         - "Account Access"
-      summary: "Delete a customer's consent"
+      summary: "Delete account information consent"
+      description: "Delete a customer's consent"
       operationId: "DeleteAccountAccessConsentsConsentId"
       parameters:
         - $ref: "#/components/parameters/ConsentId"
@@ -127,7 +130,8 @@ paths:
     get:
       tags:
         - "Accounts"
-      summary: "Fetch information for all of a customer's accounts"
+      summary: "Get customer accounts"
+      description: "Fetch information for all of a customer's accounts"
       operationId: "GetAccounts"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -159,7 +163,8 @@ paths:
     get:
       tags:
         - "Accounts"
-      summary: "Get accounts"
+      summary: "Get customer account"
+      description: "Fetch information for a customer's account"
       operationId: "GetAccountsAccountId"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -192,7 +197,8 @@ paths:
     get:
       tags:
         - "Balances"
-      summary: "Get balances"
+      summary: "Get account balances"
+      description: "Fetch an account's balances"
       operationId: "GetAccountsAccountIdBalances"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -225,7 +231,8 @@ paths:
     get:
       tags:
         - "Beneficiaries"
-      summary: "Get beneficiaries"
+      summary: "Get account payees"
+      description: "Fetch an account's payees"
       operationId: "GetAccountsAccountIdBeneficiaries"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -260,7 +267,8 @@ paths:
     get:
       tags:
         - "Direct Debits"
-      summary: "Get direct debits"
+      summary: "Get account direct debits"
+      description: "Fetch an account's direct debit orders"
       operationId: "GetAccountsAccountIdDirectDebits"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -295,7 +303,8 @@ paths:
     get:
       tags:
         - "Offers"
-      summary: "Get offers"
+      summary: "Get account offers"
+      description: "Fetch offers available to a customer account"
       operationId: "GetAccountsAccountIdOffers"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -330,7 +339,8 @@ paths:
     get:
       tags:
         - "Parties"
-      summary: "Get parties"
+      summary: "Get account owner(s)"
+      description: "Fetch all account owners' identity details"
       operationId: "GetAccountsAccountIdParties"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -365,7 +375,8 @@ paths:
     get:
       tags:
         - "Parties"
-      summary: "Get parties"
+      summary: "Get account's authorising owner"
+      description: "Fetch details of an account's owners"
       operationId: "GetAccountsAccountIdParty"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -400,7 +411,8 @@ paths:
     get:
       tags:
         - "Products"
-      summary: "Get products"
+      summary: "Get account product"
+      description: "Fetch product information for all of a customer's accounts"
       operationId: "GetAccountsAccountIdProduct"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -435,7 +447,8 @@ paths:
     get:
       tags:
         - "Scheduled Payments"
-      summary: "Get scheduled payments"
+      summary: "Get account scheduled payments"
+      description: "Fetch an account's scheduled payments"
       operationId: "GetAccountsAccountIdScheduledPayments"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -470,7 +483,8 @@ paths:
     get:
       tags:
         - "Standing Orders"
-      summary: "Get standing orders"
+      summary: "Get account standing orders"
+      description: "Fetch an account's standing orders"
       operationId: "GetAccountsAccountIdStandingOrders"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -505,7 +519,8 @@ paths:
     get:
       tags:
         - "Statements"
-      summary: "Get statements"
+      summary: "Get account statements"
+      description: "Fetch an account's statement information"
       operationId: "GetAccountsAccountIdStatements"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -542,7 +557,8 @@ paths:
     get:
       tags:
         - "Statements"
-      summary: "Get statement"
+      summary: "Get account statement"
+      description: "Fetch an account's statement information"
       operationId: "GetAccountsAccountIdStatementsStatementId"
       parameters:
         - $ref: "#/components/parameters/StatementId"
@@ -578,7 +594,8 @@ paths:
     get:
       tags:
         - "Statements"
-      summary: "Get statement file"
+      summary: "Get account statement file"
+      description: "Fetch an account's statement as a file"
       operationId: "GetAccountsAccountIdStatementsStatementIdFile"
       parameters:
         - $ref: "#/components/parameters/StatementId"
@@ -614,7 +631,8 @@ paths:
     get:
       tags:
         - "Transactions"
-      summary: "Get statement transactions"
+      summary: "Get account statement transactions"
+      description: "Fetch transactions in a statement period"
       operationId: "GetAccountsAccountIdStatementsStatementIdTransactions"
       parameters:
         - $ref: "#/components/parameters/StatementId"
@@ -651,6 +669,7 @@ paths:
       tags:
         - "Transactions"
       summary: "Get account transactions"
+      description: "Fetch transactions for an account"
       operationId: "GetAccountsAccountIdTransactions"
       parameters:
         - $ref: "#/components/parameters/AccountId"
@@ -685,7 +704,8 @@ paths:
     get:
       tags:
         - "Balances"
-      summary: "Get balances"
+      summary: "Get customer balances"
+      description: "Fetch all of a customer's balances"
       operationId: "GetBalances"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -719,7 +739,8 @@ paths:
     get:
       tags:
         - "Beneficiaries"
-      summary: "Get beneficiaries"
+      summary: "Get customer payees"
+      description: "Fetch all of a customer's payees"
       operationId: "GetBeneficiaries"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -753,7 +774,8 @@ paths:
     get:
       tags:
         - "Direct Debits"
-      summary: "Get all direct debits"
+      summary: "Get customer direct debits"
+      description: "Fetch all of a customer's direct debit orders"
       operationId: "GetDirectDebits"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -787,7 +809,8 @@ paths:
     get:
       tags:
         - "Offers"
-      summary: "Get offers"
+      summary: "Get customer offers"
+      description: "Fetch all product offers available to a customer"
       operationId: "GetOffers"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -821,7 +844,8 @@ paths:
     get:
       tags:
         - "Parties"
-      summary: "Get Parties"
+      summary: "Get authorising owner"
+      description: "Fetch details of the account owner that authorised third-party access"
       operationId: "GetParty"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -855,7 +879,8 @@ paths:
     get:
       tags:
         - "Products"
-      summary: "Get Products"
+      summary: "Get customer product"
+      description: "Fetch product information for all of a customer's accounts"
       operationId: "GetProducts"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -889,7 +914,8 @@ paths:
     get:
       tags:
         - "Scheduled Payments"
-      summary: "Get Scheduled Payments"
+      summary: "Get customer scheduled payments"
+      description: "Fetch all of a customer's scheduled payments"
       operationId: "GetScheduledPayments"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -923,7 +949,8 @@ paths:
     get:
       tags:
         - "Standing Orders"
-      summary: "Get Standing Orders"
+      summary: "Get customer standing orders"
+      description: "Fetch all of a customer's standing orders"
       operationId: "GetStandingOrders"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -957,7 +984,8 @@ paths:
     get:
       tags:
         - "Statements"
-      summary: "Get Statements"
+      summary: "Get customer statements"
+      description: "Fetch all of a customer's statements"
       operationId: "GetStatements"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
@@ -993,7 +1021,8 @@ paths:
     get:
       tags:
         - "Transactions"
-      summary: "Get all transactions"
+      summary: "Get customer transactions"
+      description: "Fetch all of a customer's transactions"
       operationId: "GetTransactions"
       parameters:
         - $ref: "#/components/parameters/x-fapi-auth-date"
